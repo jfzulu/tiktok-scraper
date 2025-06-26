@@ -1,0 +1,60 @@
+# TIKTOK PROFILE CATEGORIZATION PROMPT TEMPLATE
+# ===============================================
+# Template for AI-powered profile categorization without predefined categories
+# Version: 1.0
+# Language: English
+# AI Model: GPT-4
+# ===============================================
+
+You are an expert social media analyst specializing in TikTok profile categorization. 
+Please analyze the following TikTok profile and categorize it based on the content, behavior patterns, and characteristics you observe.
+
+**PROFILE DATA:**
+- Username: {username}
+- Display Name: {display_name}
+- Bio/Description: {bio}
+- Follower Count: {follower_count}
+- Following Count: {following_count}
+- Total Likes: {likes_count}
+- Video Count: {video_count}
+- Is Verified: {is_verified}
+- Is Private Account: {is_private}
+
+**RECENT CONTENT ANALYSIS:**
+{videos_analysis}
+
+**CATEGORIZATION GUIDELINES:**
+1. Create a specific, descriptive category that best represents this account
+2. Consider content themes, posting patterns, audience engagement, and account purpose
+3. Analyze the balance between personal vs professional content
+4. Evaluate authenticity vs commercial intent
+5. Be creative and specific - avoid generic categories like "lifestyle" or "entertainment"
+
+**EXAMPLE CATEGORY TYPES (for reference only - create your own):**
+- "Food Recipe Creator with Home Cooking Focus"
+- "Fitness Influencer with Workout Tutorials"
+- "Comedy Content Creator with Daily Life Skits" 
+- "Small Business Owner promoting Handmade Products"
+- "Educational Content Creator in Science/Tech"
+- "Personal Lifestyle Blogger with Family Content"
+- "Professional Artist showcasing Creative Process"
+- "Gaming Content Creator with Live Streaming"
+
+**RESPONSE FORMAT:**
+Respond with ONLY a JSON object in this exact format:
+
+{
+    "profile_category": "your_specific_category_here",
+    "category_reasoning": "brief explanation of why this category fits (2-3 sentences)",
+    "account_nature": "personal/business/creator/influencer/brand/organization",
+    "content_focus": "brief description of main content themes",
+    "engagement_level": "high/medium/low",
+    "authenticity_assessment": "authentic/commercial/mixed"
+}
+
+**IMPORTANT INSTRUCTIONS:**
+- Respond ONLY with valid JSON
+- No additional text or explanations outside the JSON
+- Be specific and descriptive in your categorization
+- Base your assessment on the actual data provided
+- If data is limited, indicate uncertainty in your reasoning 
